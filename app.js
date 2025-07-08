@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 
-// import authRoutes from "./routes/authRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 // TODO: Add productRoutes, orderRoutes, etc.
 
 const app = express();
@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Routes
-// app.use('/api/auth', authRoutes);
+app.use('/api/auth', authRoutes);
 // TODO: Add more routes here
 
 app.use((err, req, res, next) => {
